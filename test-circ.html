@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+		  margin: 0;
+		  font-size: 28px;
+		}
+
+		.header {
+		  position: fixed;
+		  top: 0;
+		  z-index: 1;
+		  width: 100%;
+		  background-color: #f1f1f1;
+		}
+
+		.header h2 {
+		  text-align: center;
+		}
+
+		.content {
+		  padding: 100px 0;
+		  margin: 50px auto 0 auto;
+		  width: 80%;
+		}
+		
+		/* scrolling progress indicator */
+		#back-to-top-scroll-progress{
+			position: fixed;
+    		bottom: 24px;
+			right: 24px;
+			display: block;
+			background-color: rgba(0,0,0,.4);
+			width: 54px;
+			height: 54px;
+			border-radius: 50%;
+			transition: all .4s ease;
+			opacity: 0;
+			transform: translateY(78px);
+		}
+
+		#back-to-top-scroll-progress.active{
+			opacity: .6;
+			transform: translateY(0);
+		}
+
+		.back-to-top-icon{
+			width: 60%;
+			height: auto;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transition: all .2s ease-out;
+			opacity: .8;
+		}
+
+		.back-to-top-icon-uarr-out{
+			stroke-width: 0;
+		}
+
+		.back-to-top-icon-uarr{
+			fill: #fff;
+		}
+
+		#back-to-top-scroll-progress:hover{
+			opacity: 1;
+		}
+
+		#back-to-top-scroll-progress:hover .back-to-top-icon{
+			transform: translateY(-4px);
+			opacity: 1;
+		}
+
+		.progress-ring{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.progress-ring__bg{
+			stroke-width: 15px;
+			stroke-opacity: 0;
+		}
+
+		.progress-ring__circle{
+			stroke-width: 9px;
+			/* transition: 1s stroke-dashoffset cubic-bezier(0.190, 1.000, 0.220, 1.000); */
+			transform: rotate(-90deg);
+			transform-origin: 50% 50%;
+		}
+		/* -------------------- */
+	</style>
+</head>
+<body>
+
+	<div class="header">
+		<h2>Scroll Indicator</h2>
+	</div>
+
+	<div class="content">
+		<h3>Scroll Down to See The Effect</h3>
+		<p>We have created a "progress bar" to <b>show how far a page has been scrolled</b>.</p>
+		<p>It also <b>works when you scroll back up</b>.</p>
+		<p>It is even <b>responsive</b>! Resize the browser window to see the effect.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<hr />
+		<h4 id="s1">Something</h4>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<hr />
+		<p>The end.</p>
+	</div>
+
+	<!-- https://css-tricks.com/building-progress-ring-quickly/ -->
+
+	<a href="#top" id="back-to-top-scroll-progress">
+		<svg xmlns="http://www.w3.org/2000/svg" class="progress-ring" x="0px" y="0px" width="120" height="120" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet">
+			<circle class="progress-ring__bg" stroke="black" stroke-opacity=".3" stroke-width="11" fill="transparent" r="52" cx="60" cy="60"/>
+			<circle class="progress-ring__circle" stroke="white" stroke-opacity="1" stroke-width="7" fill="transparent" r="52" cx="60" cy="60"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" x="0px" y="0px" width="50" height="50" viewBox="0 0 252 252" preserveAspectRatio="xMidYMid meet" style="fill:#ffffff;"><g transform="translate(7.056,7.056) scale(0.944,0.944)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="none" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g class="back-to-top-icon-uarr-out" fill="#ffffff" stroke="#000000" stroke-width="15" stroke-linejoin="round"><g id="surface1 1"><path d="M133.0875,43.6275l49.9275,49.77c3.95719,3.95719 3.95719,10.37531 0,14.3325c-3.95719,3.95719 -10.37531,3.95719 -14.3325,0l-32.6025,-32.76v126.63c0.05906,3.64219 -1.85062,7.00875 -5.00062,8.83969c-3.13031,1.85063 -7.02844,1.85063 -10.15875,0c-3.15,-1.83094 -5.05969,-5.1975 -5.00063,-8.83969v-126.63l-32.6025,32.76c-3.95719,3.95719 -10.37531,3.95719 -14.3325,0c-3.95719,-3.95719 -3.95719,-10.37531 0,-14.3325l49.9275,-49.77l7.0875,-7.245z"></path></g></g><path d="M0,252v-252h252v252z" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><g class="back-to-top-icon-uarr" fill="#ffffff" stroke="none" stroke-width="1" stroke-linejoin="miter"><g id="surface1"><path d="M126,36.3825l-7.0875,7.245l-49.9275,49.77c-3.95719,3.95719 -3.95719,10.37531 0,14.3325c3.95719,3.95719 10.37531,3.95719 14.3325,0l32.6025,-32.76v126.63c-0.05906,3.64219 1.85063,7.00875 5.00063,8.83969c3.13031,1.85063 7.02844,1.85063 10.15875,0c3.15,-1.83094 5.05969,-5.1975 5.00062,-8.83969v-126.63l32.6025,32.76c3.95719,3.95719 10.37531,3.95719 14.3325,0c3.95719,-3.95719 3.95719,-10.37531 0,-14.3325l-49.9275,-49.77z"></path></g></g><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path><path d="" fill="none" stroke="none" stroke-width="1" stroke-linejoin="miter"></path></g></g></svg>
+	</a>
+
+	<script>
+		var win=window,doc=document,
+			backToTop = document.getElementById('back-to-top-scroll-progress'), 
+			circle = document.querySelector('circle.progress-ring__circle'), radius = circle.r.baseVal.value, circumference = radius * 2 * Math.PI;
+
+		circle.style.strokeDasharray = circumference+', '+circumference;
+		circle.style.strokeDashoffset = circumference;
+
+		function onScrollEventHandler(ev){
+			var winScroll = doc.body.scrollTop || doc.documentElement.scrollTop,
+				height = doc.documentElement.scrollHeight - doc.documentElement.clientHeight,
+				scrolled = (winScroll / height);
+			requestAnimationFrame(function(){
+				if(winScroll > 200){
+					backToTop.classList.add('active');
+				}else{
+					backToTop.classList.remove('active');
+				}
+				if (scrolled < 101 && scrolled > -1) circle.style.strokeDashoffset = circumference - scrolled * circumference;
+			});
+		}
+
+		if(win.addEventListener){
+			win.addEventListener('scroll', onScrollEventHandler, false); //on win scroll
+			//win.addEventListener('load', onScrollEventHandler, false ); //on win load
+			doc.addEventListener("DOMContentLoaded", onScrollEventHandler, false); //on doc ready
+		}else if(win.attachEvent){ //old IE
+			win.attachEvent('onscroll', onScrollEventHandler); //on win scroll
+			//win.attachEvent("onload", onScrollEventHandler); //on win load
+			doc.attachEvent("onreadystatechange", onScrollEventHandler); //on doc ready
+		}
+	</script>
+
+</body>
+</html>

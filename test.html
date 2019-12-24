@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+		  margin: 0;
+		  font-size: 28px;
+		}
+
+		.header {
+		  position: fixed;
+		  top: 0;
+		  z-index: 1;
+		  width: 100%;
+		  background-color: #f1f1f1;
+		}
+
+		.header h2 {
+		  text-align: center;
+		}
+
+		.content {
+		  padding: 100px 0;
+		  margin: 50px auto 0 auto;
+		  width: 80%;
+		}
+		
+		/* ps2id scrolling progress indicator */
+		#ps2id-scroll-progress {
+		  width: 100%;
+		  height: 8px;
+		  background: #ccc;
+		}
+
+		#ps2id-scroll-progress-bar {
+		  height: 8px;
+		  background: #4caf50;
+			/*width: 0;*/
+		  	width: 100%;
+			transform: scaleX(0);
+			transform-origin: 0 0 0;
+		}
+		/* -------------------- */
+	</style>
+</head>
+<body>
+
+	<div class="header">
+		<h2>Scroll Indicator</h2>
+		<div id="ps2id-scroll-progress">
+			<div id="ps2id-scroll-progress-bar" class="myBar"></div>
+		</div>  
+	</div>
+
+	<div class="content">
+		<h3>Scroll Down to See The Effect</h3>
+		<p>We have created a "progress bar" to <b>show how far a page has been scrolled</b>.</p>
+		<p>It also <b>works when you scroll back up</b>.</p>
+		<p>It is even <b>responsive</b>! Resize the browser window to see the effect.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<hr />
+		<h4 id="s1">Something</h4>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<hr />
+		<p>The end.</p>
+	</div>
+
+	<script>
+		var win=window,doc=document;
+
+		function onScrollEventHandler(ev){
+			var winScroll = doc.body.scrollTop || doc.documentElement.scrollTop,
+				height = doc.documentElement.scrollHeight - doc.documentElement.clientHeight,
+				/*scrolled = (winScroll / height) * 100*/scrolled = (winScroll / height);
+			//doc.getElementById("ps2id-scroll-progress-bar").style.width = scrolled + "%";
+			requestAnimationFrame(function(){
+				doc.getElementById("ps2id-scroll-progress-bar").style.transform = "scaleX(" + scrolled + ")";
+			});
+			
+			var y=getOffset(document.getElementById("s1")).top; 
+			
+			console.log(winScroll,y);
+		}
+		
+		function getOffset(el){
+			el=el.getBoundingClientRect();
+			return {left:el.left+window.scrollX, top:el.top+window.scrollY}
+		}
+
+		if(win.addEventListener){
+			win.addEventListener('scroll', onScrollEventHandler, false); //on win scroll
+			//win.addEventListener('load', onScrollEventHandler, false ); //on win load
+			doc.addEventListener("DOMContentLoaded", onScrollEventHandler, false); //on doc ready
+		}else if(win.attachEvent){ //old IE
+			win.attachEvent('onscroll', onScrollEventHandler); //on win scroll
+			//win.attachEvent("onload", onScrollEventHandler); //on win load
+			doc.attachEvent("onreadystatechange", onScrollEventHandler); //on doc ready
+		}
+	</script>
+
+</body>
+</html>
